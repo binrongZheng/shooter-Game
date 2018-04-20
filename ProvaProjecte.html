@@ -1,0 +1,904 @@
+<html>
+	<head>
+  </head>
+  <body>
+    	<canvas id="theCanvas" width="1900" height="960"></canvas>
+  	<script>
+	  //music
+	    var audio = new Audio('Hang On Main theme.mp3');
+		var exploSound = new Audio('ExplosionSo.mp3');
+//		if(!audio.isPlaying){
+//			audio.play();
+//		};
+//		else{
+			audio.play();
+//		}
+		audio.loop = true;
+	//Start
+		var startScreen = true;
+		var canvas = document.getElementById("theCanvas");
+		ctx = this.canvas.getContext("2d");
+		ctx.canvas.width = window.innerWidth;
+		ctx.canvas.height = window.innerHeight;
+		
+		var BackgroundManager = new BackgroundManager();
+		var engine = new GameEngine();
+		var EnemiesManager = new EnemiesManager();
+		
+		
+		var Explosion = new Explosio(); //l'objecte explosio
+		Explosion.img.onload = function() {
+			
+			Explosion.frameWidth = Explosion.img.width/5;
+			Explosion.frameHeight = Explosion.img.height/5;
+			Explosion.currentFrame = 0;
+			
+		};
+	  
+	  //PLAYER
+      function Player(){
+		this.img=new Image();
+		this.img.src=("player.png");
+		this.scale=1;
+		//direcction
+		this.right=true;
+		
+		//HUD
+		this.img1=new Image();this.img1.src=("barra de vida.png");
+		this.scaleBarra=0.2;
+		this.img2=new Image();this.img2.src=("barra de vida2.png");
+		this.score = 0;
+		
+		
+		this.HP = 100;
+		
+		this.position={
+			x:canvas.width/2,
+			y:canvas.height/2
+		}
+			
+		this.velocity={
+			vel:10
+		}
+
+		
+		this.moveUp = false; this.moveDown = false; this.moveLeft = false; this.moveRight = false;
+		
+		this.onKeyDown = function (code) {
+			if(code==87){
+				this.moveUp = true;
+
+			}
+			
+			if(code==83){
+				this.moveDown = true;
+
+			}
+			
+			if(code==65){ //A
+				this.moveLeft = true;
+
+			}
+			
+			if(code==68){
+				this.moveRight = true;
+
+			}
+		}
+		
+		this.onKeyUp = function (code) {
+			if(code==87){
+				this.moveUp = false;
+
+			}
+			
+			if(code==83){
+				this.moveDown = false;
+
+			}
+			
+			if(code==65){ //A
+				this.moveLeft = false;
+
+			}
+			
+			if(code==68){
+				this.moveRight = false;
+
+			}
+		}
+		
+		this.movement = function() {
+			if (this.moveUp)
+				this.position.y-=this.velocity.vel;
+			if (this.moveDown)
+				this.position.y+=this.velocity.vel;
+			if (this.moveLeft)
+				this.position.x-=this.velocity.vel;
+			if (this.moveRight)
+				this.position.x+=this.velocity.vel;
+		}
+				
+		this.checkCollision = function () {
+			
+			for(var i = 0; i<EnemiesManager.enemies.length;i++) {
+				
+				if(this.position.x < EnemiesManager.enemies[i].position.x+(EnemiesManager.enemies[i].img.width*EnemiesManager.enemies[i].scale))
+					if(this.position.x+(this.img.width*this.scale) > EnemiesManager.enemies[i].position.x)
+						if(this.position.y < EnemiesManager.enemies[i].position.y+(EnemiesManager.enemies[i].img.height*EnemiesManager.enemies[i].scale))
+							if(this.position.y+(this.img.height*this.scale) > EnemiesManager.enemies[i].position.y) {
+								if(Explosion.explotant == false) {
+									exploSound.play();
+									Explosion.scale = 2;
+									Explosion.currentFrame = 0;
+									Explosion.position = this.position;
+									this.HP = 0;
+									Explosion.explotant = true;
+								}
+								
+							}			
+			}
+			
+		}
+		this.distCounter = 60;
+		this.update=function(delta){
+							
+			if(this.HP >0) {
+				this.limit();
+				this.movement();
+				this.checkCollision();
+				if(this.distCounter <= 0) {
+					this.score += 1;
+					this.distCounter = 60;
+				}
+				this.distCounter--;	
+				
+			}
+			if(this.HP <=0){
+				this.HP=0;
+			}
+			
+			
+		}
+		//limit de moviment,per no surt la pantalla
+		this.limit=function(){
+			if(this.position.y<=0){
+				this.position.y=0;
+			}
+			if(this.position.y>=canvas.height-this.img.height*this.scale){
+				this.position.y=canvas.height-this.img.height*this.scale;
+			}
+			if(this.position.x<=0){
+				this.position.x=0;
+			}
+			if(this.position.x>=canvas.width-this.img.width*this.scale){
+				this.position.x=canvas.width-this.img.width*this.scale;
+			}
+		}
+		
+		this.normal=function(){
+			ctx.save();
+			ctx.drawImage(this.img,
+						  this.position.x,
+						  this.position.y,
+						  this.img.width,
+						  this.img.height);
+			ctx.restore();
+		}
+		
+		//player flip
+		this.flip = function (){
+
+			ctx.save();
+
+			ctx.translate(this.position.x+this.img.width, this.position.y+this.img.height);
+			ctx.rotate(Math.PI);
+			ctx.drawImage(this.img,0,0 , this.img.width, this.img.height);
+
+			ctx.restore();
+			}
+			
+		
+		this.direction=function(){
+			if(this.moveLeft==true){
+				this.flip();
+				
+			}
+			else{
+			
+				this.normal();
+			}
+		
+		}
+
+		this.draw=function(){
+			if (this.HP <= 0) {
+				console.log(Explosion.currentFrame);
+				Explosion.counter += delta;
+				Explosion.anim();
+				if(Explosion.currentFrame >= 25) {
+					location.reload();
+					
+				}
+					
+			}else {
+			this.direction();
+			/*ctx.drawImage(this.img,
+								 this.position.x,
+								 this.position.y,
+								 this.img.width*this.scale,
+								 this.img.height*this.scale);
+			}*/
+			
+		}
+			
+	  }
+	  }
+	  //EXPLOSIO 
+	  function Explosio () {
+		this.img = new Image();
+		this.img.src = ("explosio.png");
+		
+		this.explotant = false;
+		
+		this.frameWidth;
+		this.frameHeight;
+		this.currentFrame;
+				
+		this.numFrames = 25;
+		this.counter = 0;
+		this.scale = 2;			
+		
+		this.position = {
+			x:0,
+			y:0
+		};
+		
+		this.anim = function () {
+			//ctx.clearRect(this.position.x, this.position.y, this.frameWidth*2, this.frameHeight*2);
+			
+				
+			ctx.drawImage(this.img,
+							this.frameWidth*(this.currentFrame%5), //coord x donde empezar a cortar
+							this.frameHeight*Math.floor(this.currentFrame/5), //coord y donde empezar clip
+							this.frameWidth, //width clip, tamany del tros que pilles.
+							this.frameHeight, //height clip
+							this.position.x, //pos x dibujar
+							this.position.y, //pos y dibujar
+							this.frameWidth*this.scale, //escala
+							this.frameHeight*this.scale) //escala 
+			
+			
+			
+			
+			if(this.counter > 100) {
+				this.currentFrame++;
+				counter = 0;
+			}		
+		}
+		
+	  }
+
+	  //BALES
+	  function bala (x,y,vx,vy,damage,image){
+		this.img=image;
+
+		this.scale=1;
+		
+		this.position={
+			x:x,
+			y:y+30
+		}
+			
+		this.velocity={
+			velx:vx,
+			vely:vy
+		}
+		this.move = function(){
+				this.position.x+=this.velocity.velx;	
+				this.position.y+=this.velocity.vely;	
+		}
+		//limit de moviment,per no surt la pantalla
+		this.limit=function(){
+			for(var i = 0;i<engine.dispara.bales.length;i++) {
+				if(engine.dispara.bales[i].position.x>=canvas.width+10||engine.dispara.bales[i].position.y>=canvas.height+10||engine.dispara.bales[i].position.y<=0-engine.dispara.bales[i].img.height||engine.dispara.bales[i].position.x<=0-engine.dispara.bales[i].img.width/2){
+					engine.dispara.bales.splice(i,1);
+								
+				}
+			}
+		}
+		
+		this.checkCollision = function () {	
+			for(var i = 0; i<EnemiesManager.enemies.length;i++) {
+				
+				if(this.position.x < EnemiesManager.enemies[i].position.x+(EnemiesManager.enemies[i].img.width*EnemiesManager.enemies[i].scale))
+					if(this.position.x+(this.img.width*this.scale) > EnemiesManager.enemies[i].position.x)
+						if(this.position.y < EnemiesManager.enemies[i].position.y+(EnemiesManager.enemies[i].img.height*EnemiesManager.enemies[i].scale))
+							if(this.position.y+(this.img.height*this.scale) > EnemiesManager.enemies[i].position.y) {
+								if(EnemiesManager.enemies[i].HP > 0) {
+									
+									engine.player.score += 25;
+									Explosion.scale = EnemiesManager.enemies[i].eScale;
+									Explosion.currentFrame = 0;
+									Explosion.position = EnemiesManager.enemies[i].position;
+									/*
+									if(EnemiesManager.enemyType == 0 || EnemiesManager.enemyType == 3) {
+										Explosion.position.x = EnemiesManager.enemies[i].position.x - EnemiesManager.enemies[i].img.width/10;
+										Explosion.position.y = EnemiesManager.enemies[i].position.y - EnemiesManager.enemies[i].img.height/10;
+									}
+									if(EnemiesManager.enemyType == 1 || EnemiesManager.enemies[i].enemyType == 4) {
+										Explosion.position.x = EnemiesManager.enemies[i].position.x - EnemiesManager.enemies[i].img.width/5;
+										Explosion.position.y = EnemiesManager.enemies[i].position.y - EnemiesManager.enemies[i].img.height/5;
+									}
+									if(EnemiesManager.enemyType == 2 || EnemiesManager.enemyType == 5) {
+										Explosion.position.x = EnemiesManager.enemies[i].position.x - EnemiesManager.enemies[i].img.width/5;
+										Explosion.position.y = EnemiesManager.enemies[i].position.y - EnemiesManager.enemies[i].img.height/5;
+									}*/
+									var enemyDeathSo = new Audio('ExplosionSo.mp3');
+									enemyDeathSo.volume = 0.2;
+									enemyDeathSo.play();
+								}
+								EnemiesManager.enemies[i].HP -= damage;
+								engine.dispara.bales.splice(i,1); 
+								
+								
+							}			
+			}
+			
+		}
+
+		this.update=function(delta){
+				this.move();
+				this.limit();
+				this.checkCollision();
+		}
+		
+		this.draw=function(){
+			ctx.drawImage(this.img,
+						  this.position.x,
+						  this.position.y,
+						  this.img.width*this.scale,
+						  this.img.height*this.scale);
+		}
+	  }
+	 
+	  function disparaSelect(){
+		//player dispara
+		this.img01=new Image();this.img01.src=("fireR1.png");
+		this.img02R=new Image();this.img02R.src=("fireRR1.png");
+		this.img02RU=new Image();this.img02RU.src=("fireRU1.png");
+		this.img02RD=new Image();this.img02RD.src=("fireRD1.png");
+		this.img03U=new Image();this.img03U.src=("fireU2.png");
+		this.img03R=new Image();this.img03R.src=("fireR2.png");
+		this.img03D=new Image();this.img03D.src=("fireD2.png");
+		this.img03L=new Image();this.img03L.src=("fireL2.png");
+		this.img03RU=new Image();this.img03RU.src=("fireRU2.png");
+		this.img03RD=new Image();this.img03RD.src=("fireRD2.png");
+		this.img03LD=new Image();this.img03LD.src=("fireLD2.png");
+		this.img03LU=new Image();this.img03LU.src=("fireLU2.png");
+		this.bulletIcon = new Image();this.bulletIcon.src=("bulletIcon.png");
+		
+		var option=0;
+		this.cooldown = 0;
+		this.time=0;
+		this.bales =[];
+		
+		this.selectUp=false;this.selectDown=false;this.selectR=false;this.selectL=false;
+		
+		
+		this.onKeyUp = function(code){
+			if(code==38){
+				this.selectUp=true;
+			}
+			if(code==40){
+				this.selectDown=true;
+			}
+			if(code==39){
+				this.selectR=false;
+			}
+			if(code==37){
+				this.selectL=false;
+			}
+		}
+		this.onKeyDown = function(code){
+			
+			if(code==39){
+				this.selectR=true;
+			}
+			if(code==37){
+				this.selectL=true;
+			}
+		}
+		
+		this.InputManager=function(){
+		
+				if(this.selectUp==true){
+					option= (option+1)%3;
+					this.selectUp=false;
+									
+				}
+				if(this.selectDown==true){
+					if(option <= 0)
+						option= (3-(option + 1))%3;
+					else if(option > 0)
+						option = (option -1)%3;
+					this.selectDown=false;
+				}
+				console.log(option);
+					
+					
+					switch(option){
+						case 0:
+							if(this.cooldown >= 10) {	
+								
+								if (this.selectR==true){
+									var laserShoot = new Audio('laserShoot.mp3');
+									laserShoot.play();
+								this.vel=20;
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel,0,5,this.img01));
+								this.selectL=false;;
+								}
+								if (this.selectL==true){
+									var laserShoot = new Audio('laserShoot.mp3');
+									laserShoot.play();
+								this.vel=-20;
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel,0,5,this.img01));
+								this.selectR=false;
+								}
+								this.cooldown = 0;
+							}
+							this.cooldown++;
+							break;
+						case 1:
+							if(this.cooldown >= 25) {	
+													
+							
+							if (this.selectR==true){
+								var laserShoot = new Audio('laserShoot.mp3');
+									laserShoot.play();
+								this.vel=12;
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel+5,0,3,this.img02R),
+								new bala(engine.player.position.x,engine.player.position.y,this.vel+5,-this.vel,3,this.img02RU),
+								new bala(engine.player.position.x,engine.player.position.y,this.vel+5,this.vel,3,this.img02RD));
+								this.selectL=false;
+							}
+							if (this.selectL==true){
+								var laserShoot = new Audio('laserShoot.mp3');
+									laserShoot.play();
+								this.vel=-12;
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel-5,0,3,this.img02R));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel-5,this.vel,3,this.img02RU));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel-5,-this.vel,3,this.img02RD));
+								
+								this.selectR==false;
+							}
+							this.cooldown = 0;
+							}
+							this.cooldown++;
+							break;
+						case 2:
+							if(this.cooldown >= 40) {	
+							
+														
+							this.vel=13;
+							if (this.selectR==true||this.selectL==true){
+								var laserShoot = new Audio('laserShoot.mp3');
+									laserShoot.play();
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,0,-this.vel,10,this.img03U));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel,0,10,this.img03R));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,0,this.vel,10,this.img03D));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,-this.vel,0,10,this.img03L));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel-2,-this.vel+2,10,this.img03RU));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,this.vel-2,this.vel-2,10,this.img03RD));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,-this.vel+2,this.vel-2,10,this.img03LD));
+								this.bales.push(new bala(engine.player.position.x,engine.player.position.y,-this.vel+2,-this.vel+2,10,this.img03LU));
+								
+							}
+							this.cooldown = 0;
+							}
+							this.cooldown++;
+							break;
+					}
+					
+		}
+		
+		
+		this.update=function(delta){
+			
+			this.InputManager();
+			for(var i=0;i<this.bales.length;i++){
+				this.bales[i].update();
+			}	
+			
+		}
+		this.draw=function(){
+			
+			for(var i =0;i<this.bales.length;i++){
+				this.bales[i].draw();
+			}
+			if(option==0)
+				ctx.drawImage(this.img01,100,canvas.height-110, this.img01.width*2,this.img01.height*2);
+			else if(option==1)
+				ctx.drawImage(this.img02R,100,canvas.height-110, this.img02R.width*2,this.img02R.height*2);
+			else if(option==2)
+				ctx.drawImage(this.img03U,100,canvas.height-110, this.img03U.width*2,this.img03U.height*2);
+			
+			ctx.drawImage(this.bulletIcon,10,canvas.height-125, this.bulletIcon.width*0.08,this.bulletIcon.height*0.08);
+		}
+	}
+
+	  //ENEMY 
+	  
+	  //Movement
+	  function EnemyMove (p1, p2, t) { //p1 i p2 son objectes amb propietats x, y
+		//calcular diferencia
+		var dy = p2.y - p1.y;
+		
+		//multiplicar por t
+		var dyt = dy*t;
+		
+		//sumarp1
+		var newY = p1.y +dyt;
+		
+		
+		return newY
+		
+	}
+	  //Class
+	  function Enemy (scale, HP, speed, lerpSpeed, fuente, Xo, eScale) {
+		this.img = fuente;
+
+		this.eScale = eScale;
+		this.scale = scale;
+		
+		this.bales = [];
+		this.bala = function (image, xPos,yPos, speed) {
+			this.img = new Image ();
+			this.img.src = image;
+			
+			this.position = {
+				x : xPos,
+				y : yPos
+			}
+			
+			this.scale = 1;
+			
+			this.checkCollision = function () {	
+			
+			if(this.position.x < engine.player.position.x+(engine.player.img.width*engine.player.scale))
+				if(this.position.x+(this.img.width*this.scale) > engine.player.position.x)
+					if(this.position.y < engine.player.position.y+(engine.player.img.height*engine.player.scale))
+						if(this.position.y+(this.img.height*this.scale) > engine.player.position.y) {
+							if(engine.player.HP <= 0) {
+								if(Explosion.explotant == false) {
+									Explosion.position = engine.player.position;
+									Explosion.scale = 2;
+									Explosion.currentFrame = 0;
+									Explosion.explotant = true; 
+								}
+							}
+							engine.player.HP -= 5;
+							this.position.x = canvas.width+10;//perque desapareixi
+						}
+			
+			for(var i = 0; i<engine.dispara.bales.length;i++) {
+				if(this.position.x < engine.dispara.bales[i].position.x+(engine.dispara.bales[i].img.width*engine.dispara.bales[i].scale))
+					if(this.position.x+(this.img.width*this.scale) > engine.dispara.bales[i].position.x)
+						if(this.position.y < engine.dispara.bales[i].position.y+(engine.dispara.bales[i].img.height*engine.dispara.bales[i].scale))
+							if(this.position.y+(this.img.height*this.scale) > engine.dispara.bales[i].position.y) {
+								this.position.x = canvas.width+10;
+								engine.dispara.bales.splice(i,1);
+								
+							}	
+			}
+			}
+			
+			this.update = function () {
+				this.position.x -= (speed/Math.abs(speed))*25;
+			}
+			
+			this.draw=function(){
+				ctx.drawImage(this.img,
+							  this.position.x,
+							  this.position.y,
+							  this.img.width*this.scale,
+							  this.img.height*this.scale);
+				}
+			
+		}
+				
+		this.HP = HP;
+		this.cooldown = 35;
+		this.die = function (i) {
+			
+			if(Explosion.currentFrame >= 25)	{
+				EnemiesManager.enemies.splice(i,1);
+				
+			}
+			
+		}
+			
+		this.position = {
+			x: Xo, 
+			y: Math.floor(Math.random()*canvas.height)
+		}
+		
+		this.update = function (delta) {
+			if(this.HP > 0) {
+				
+				this.position.y = EnemyMove (this.position, engine.player.position, lerpSpeed);
+				this.position.x -= speed;
+			}
+			
+			if(this.cooldown <= 0) {
+				this.bales.push(new this.bala("fireEnemig01.png", this.position.x,this.position.y, speed));
+				this.cooldown = 35;
+			} this.cooldown --;
+			
+			for(var i = 0; i< this.bales.length;i++) {
+				this.bales[i].update();
+				this.bales[i].checkCollision();
+				if(this.bales[i].position.x > canvas.width || this.bales[i].position.x < 0)
+					this.bales.splice(i, 1);
+			}
+		
+		}
+		
+		this.draw = function () {
+			ctx.drawImage(this.img, this.position.x, this.position.y, this.img.width*this.scale, this.img.height*this.scale); //es el context el que dibuja no el canvas
+			if (this.HP <= 0) {
+									
+				Explosion.counter += delta;
+				Explosion.anim();
+				
+				this.die();
+			}
+			for(var i = 0; i< this.bales.length;i++) {
+				this.bales[i].draw();
+			}
+		}
+		
+	 }
+	 //Manager de tots els enemics : executa update, draw i spawn de tots
+	 function EnemiesManager () {
+		this.img1 = new Image();
+		this.img1.src = "enemy1.png" ;
+		
+		this.img2 = new Image();
+		this.img2.src = "enemy2.png" ;
+		
+		this.img3 = new Image();
+		this.img3.src = "enemy3.png" ;
+		
+		this.enemies = [];
+		
+				
+		this.waveCounter = 1+ Math.floor(Math.random()*3);
+		this.spawnCounter = 0;
+		
+		this.enemyInstance;
+		this.enemyType = Math.floor(Math.random()*6);
+							
+		this.spawn = function () { //crea oleades d'entre 1-4 enemics.
+			
+				
+				switch(this.enemyType) {
+					case 0: 
+						this.enemyInstance = new Enemy(0.2, 10, 6, 0.05, this.img1, canvas.width + 5, 2);
+						
+						break;
+					case 1: 
+						this.enemyInstance = new Enemy(0.8, 10, 4, 0.01, this.img2, canvas.width + 5, 3);
+						break;
+					case 2: 
+						this.enemyInstance = new Enemy(0.5, 10, 10, 0.01, this.img3, canvas.width + 5, 3);
+						break;
+					case 3: 
+						this.enemyInstance = new Enemy(0.2, 10, -6, 0.05, this.img1, -5, 2);
+						break;
+					case 4: 
+						this.enemyInstance = new Enemy(0.8, 10, -4, 0.01, this.img2, -5, 3);
+						break;
+					case 5: 
+						this.enemyInstance = new Enemy(0.5, 10, -10, 0.01, this.img3, -5, 3);
+						break;
+				}
+			
+			
+			if(this.waveCounter <= 0 && this.spawnCounter >= 150) {
+				this.waveCounter = 1+ Math.floor(Math.random()*3);
+				this.spawnCounter = 0;
+				this.enemyType = Math.floor(Math.random()*6);			
+			}
+				
+			
+			if(this.spawnCounter >= 40 && this.waveCounter >= 0) {
+				this.enemies.push(this.enemyInstance);
+									
+				this.waveCounter--;
+				this.spawnCounter = 0;
+			}
+			
+			this.spawnCounter ++;
+			
+		}
+		
+		this.update = function (delta) {
+			for(var i = 0; i<this.enemies.length;i++) {
+				this.enemies[i].update(delta);
+			}
+		}
+		
+		this.draw = function () {
+			for(var i = 0; i<this.enemies.length;i++) {
+				this.enemies[i].draw();
+			}
+		}
+	 }
+	 
+	
+      //BACKGROUND
+      function Star () {
+      	
+        this.img = new Image();
+		this.img.src = "star.png";
+        
+        this.scale = 0.01+ Math.random()*0.1;
+        
+        this.position = {
+        	x:Math.floor(Math.random()*canvas.width),
+            y:Math.floor(Math.random()*canvas.height)
+        }
+		
+        
+        this.update = function (delta) {
+        	
+			if(this.position.x <= 0) {
+				this.position.x = canvas.width;
+				this.position.y = Math.floor(Math.random()*canvas.height);
+			}
+			else {
+				this.position.x -= 5;
+			}
+			
+        }
+        
+        this.draw=function(){
+        	ctx.drawImage (this.img, this.position.x, this.position.y, this.img.width*this.scale, this.img.height*this.scale);
+        }
+        
+      }
+      
+	  function BackgroundManager () {
+		this.stars = [];
+		
+		this.createStars = function (num) {
+			
+          for(var i = 0; i<num;i++){
+          	var star = new Star();
+			this.stars.push(star);
+		  }
+        }
+		
+		this.update = function (delta) {
+        	for(var i = 0; i<this.stars.length; i++){
+				this.stars[i].update(delta);
+            }
+        }
+		
+		this.draw = function () {
+			for(var i = 0; i<this.stars.length; i++){
+          		this.stars[i].draw();
+            }
+        }
+	  }
+	  	  
+      //GAME ENGINE
+      function GameEngine () {	
+        		
+		//Player
+		this.player = new Player();
+		
+		//Creeem estrelles
+		this.stars = BackgroundManager.createStars(50);
+        
+		//cotrol dispara
+		this.dispara = new disparaSelect();
+		
+		//tipus de Bales
+		if(!startScreen)
+			this.bala = new bala(this.player.position.x+this.player.img.width/2,this.player.position.y+this.player.img.height/10*4);        
+        
+		this.update = function (delta) {
+          //llamamos al update de cada objecto del juego
+          BackgroundManager.update(delta);
+		  if(!startScreen) {	  
+			this.player.update(delta);
+			this.dispara.update();
+			EnemiesManager.spawn();
+			EnemiesManager.update(delta);
+		  }
+          
+        }
+
+        this.draw = function () {
+			//llamamos al draw de cada objecto del juego.
+			
+			ctx.fillStyle = "black";
+			ctx.fillRect(0, 0, canvas.width, canvas.height);//tamany fondo
+			BackgroundManager.draw();
+			if(!startScreen) {
+				ctx.font = "30px Comic Sans MS";
+				ctx.fillStyle = "white";
+				ctx.fillText("Score: " + this.player.score, canvas.width-200, 100); 
+				
+				EnemiesManager.draw();   
+				this.dispara.draw();
+				this.player.draw();
+			} else {
+				ctx.font = "800 60px Georgia";
+				ctx.fillStyle = "white";
+				ctx.fillText("TO START PRESS ANY KEY", canvas.width/2-450, canvas.height/2-100);
+				
+				ctx.font = "800 30px Arial";
+				this.img=new Image();
+				this.img.src=("wasd.png");
+				ctx.drawImage(this.img,275,canvas.height/1.94,this.img.width,this.img.height);
+				ctx.fillText("MOVE", 550, canvas.height-200);
+				
+				this.img1=new Image();
+				this.img1.src=("arrows.png");
+				ctx.drawImage(this.img1,canvas.width/2-100,canvas.height-400,this.img1.width,this.img1.height);
+				ctx.fillText("SHOOT", canvas.width/2+140, canvas.height/2+230);
+				ctx.fillText("CHANGE BULLET", canvas.width/2+60, canvas.height/2+50);
+			}            
+        }
+      }
+     
+	
+	  
+      
+    //MAIN EXECUTE
+		
+    var tNow = tOld = window.performance.now();
+    var delta = 0;
+
+    window.main = function () {
+
+      window.requestAnimationFrame(window.main);
+
+      //actualizamos tiempo actualizamos
+      tNow = window.performance.now();
+      //calcular delta: tiempo entre tNow i tOld, entre cada frame.
+      delta = tNow-tOld;
+      tOld = tNow;
+
+      engine.update(delta);
+      engine.draw();
+    }
+
+    window.main();
+
+	//INPUTS
+	window.addEventListener("keydown",function(e){
+		//console.log(e.keyCode);
+		if(startScreen)
+			startScreen = false;
+		else {
+			engine.player.onKeyDown(e.keyCode);
+			engine.dispara.onKeyDown(e.keyCode);
+			
+		}
+	});
+	//dispara control
+	window.addEventListener("keyup",function(e){
+		if(!startScreen) {
+			engine.player.onKeyUp(e.keyCode);
+			engine.dispara.onKeyUp(e.keyCode);
+		}
+			
+	});
+    </script>
+  </body>
+
+</html>

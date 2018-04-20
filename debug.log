@@ -1,0 +1,287 @@
+[0530/192904:ERROR:process_info.cc(608)] range at 0xfffde000, size 0x230 fully unreadable
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76315ffc of 28 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(134)] could not read data directory from C:\Windows\syswow64\RPCRT4.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75840000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\SysWOW64\sechost.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75a60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\ADVAPI32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x60f90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\50.0.2661.102\chrome_elf.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74700000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\VERSION.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75900000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\USP10.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x758f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\LPK.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74a80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\GDI32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76170000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\USER32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x6fa00000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WINMM.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x759a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\profapi.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x767f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\USERENV.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x710e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WTSAPI32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72a50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\webio.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72aa0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WINHTTP.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75770000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\MSCTF.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75ef0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\IMM32.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75c20000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\SHLWAPI.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74b20000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\SHELL32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75a50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\PSAPI.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x746a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WINSPOOL.DRV
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x6ff10000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75e50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\COMDLG32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75c80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\ole32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75b10000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\OLEAUT32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74b10000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\NSI.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x729b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WINNSI.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x729c0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\IPHLPAPI.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x764b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\WS2_32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75f50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\MSASN1.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76620000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\CRYPT32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x767c0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\WINTRUST.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x70770000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\Secur32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0xf5e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\50.0.2661.102\chrome_child.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x60c90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files\AVAST Software\Avast\aswJsFlt.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72d60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\WinSxS\x86_avast.vc110.crt_2036b14a11e83e4a_11.0.60610.1_none_1d37a43bbfe1dc9c\MSVCR110.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72cb0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswCmnIS.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72e40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\WinSxS\x86_avast.vc110.crt_2036b14a11e83e4a_11.0.60610.1_none_1d37a43bbfe1dc9c\MSVCP110.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72c80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswCmnOS.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72d00000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswCmnBS.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75bf0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\CFGMGR32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76750000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\DEVOBJ.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76810000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\SETUPAPI.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72ed0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\log.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72a00000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\DNSAPI.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72b00000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\commchannel.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71d70000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\JsonRpcServer.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72930000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\rasman.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72950000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\RASAPI32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x729e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\avastIP.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72910000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswEngLdr.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71bc0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\AavmRpch.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72b90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WSOCK32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76e60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-user32-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76600000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x759b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-version-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75de0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-normaliz-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76610000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\normaliz.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75ee0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-advapi32-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74840000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\iertutil.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75f60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\WININET.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72ba0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\ashBase.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71a60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswAux.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71b50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\ashTask.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71c10000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\Aavm4h.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x6f100000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\dwrite.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76f95120 of 5888 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x10b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76e90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\SysWOW64\ntdll.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75ba0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\KERNELBASE.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x764f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\KERNEL32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x5f3d0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files\AVAST Software\Avast\snxhk.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x769e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\msvcrt.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x747d0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\CRYPTBASE.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x747e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\SspiCli.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76270000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\RPCRT4.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75840000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\SysWOW64\sechost.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75a60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\ADVAPI32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x60f90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\50.0.2661.102\chrome_elf.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74700000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\VERSION.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75900000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\USP10.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x758f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\LPK.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74a80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\GDI32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76170000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\USER32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x6fa00000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WINMM.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x759a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\profapi.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x767f0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\USERENV.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x710e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WTSAPI32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72a50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\webio.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72aa0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WINHTTP.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75770000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\MSCTF.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75ef0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\IMM32.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75c20000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\SHLWAPI.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74b20000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\SHELL32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75a50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\PSAPI.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x746a0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WINSPOOL.DRV
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x6ff10000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75e50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\COMDLG32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75c80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\ole32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75b10000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\OLEAUT32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74b10000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\NSI.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x729b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WINNSI.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x729c0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\IPHLPAPI.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x764b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\WS2_32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75f50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\MSASN1.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76620000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\CRYPT32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x767c0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\WINTRUST.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x70770000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\Secur32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0xf5e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files (x86)\Google\Chrome\Application\50.0.2661.102\chrome_child.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x60c90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Program Files\AVAST Software\Avast\aswJsFlt.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72d60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\WinSxS\x86_avast.vc110.crt_2036b14a11e83e4a_11.0.60610.1_none_1d37a43bbfe1dc9c\MSVCR110.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72cb0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswCmnIS.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72e40000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\WinSxS\x86_avast.vc110.crt_2036b14a11e83e4a_11.0.60610.1_none_1d37a43bbfe1dc9c\MSVCP110.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72c80000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswCmnOS.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72d00000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswCmnBS.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75bf0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\CFGMGR32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76750000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\DEVOBJ.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76810000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\SETUPAPI.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72ed0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\log.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72a00000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\DNSAPI.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72b00000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\commchannel.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71d70000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\JsonRpcServer.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72930000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\rasman.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72950000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\RASAPI32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x729e0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\avastIP.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72910000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswEngLdr.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71bc0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\AavmRpch.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72b90000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\WSOCK32.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76e60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-user32-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76600000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-shlwapi-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x759b0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-version-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75de0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-normaliz-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x76610000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\normaliz.DLL
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75ee0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\api-ms-win-downlevel-advapi32-l1-1-0.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x74840000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\iertutil.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x75f60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\syswow64\WININET.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x72ba0000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\ashBase.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71a60000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\aswAux.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71b50000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\ashTask.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x71c10000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\PROGRA~1\AVASTS~1\Avast\Aavm4h.dll
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x6f100000 of 64 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:pe_image_reader.cc(280)] could not read dos header from C:\Windows\system32\dwrite.dll
+[0530/192904:ERROR:process_reader_win.cc(98)] process 7068 not found
+[0530/192904:ERROR:process_reader_win.cc(232)] ReadMemory at 0x115d1b4 of 12 bytes failed: Sólo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory. (0x12B)
+[0530/192904:WARNING:process_snapshot_win.cc(96)] ReadMemory ExceptionInformation failed
+[0530/192904:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::InitializeException failed
+[0530/192904:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess, ntstatus=-1073741558
